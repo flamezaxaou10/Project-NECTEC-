@@ -35,7 +35,7 @@ char slope = 'W';
 int PulseSensorPurplePin = 0; 
 int LED13 = 13; 
 int Signal;
-int Threshold = 600;
+int Threshold = 650;
 int myBPM;
 int pulse = 0;
 bool ct,cb;
@@ -121,7 +121,7 @@ void startSensor () {
       digitalWrite(LED13,HIGH);                   
       ct = true;
     }
-    else if (Signal < (Threshold - 40)) {
+    else if (Signal < (Threshold - 100)) {
       digitalWrite(LED13,LOW); 
       cb = true;
     } 
